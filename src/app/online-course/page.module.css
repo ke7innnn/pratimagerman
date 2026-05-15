@@ -1,0 +1,456 @@
+.main {
+  min-height: 100vh;
+  background: #fff;
+  padding-top: 140px;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ─── Page Hero ─────────────────────────── */
+.pageHero {
+  padding: 120px 0 90px;
+  text-align: center;
+  background-color: var(--color-bg);
+}
+
+.heroBadge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 100px;
+  border: 1px solid var(--color-border);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
+}
+
+.pageHeroTitle {
+  font-size: 72px;
+  font-weight: 500;
+  color: var(--color-text-main);
+  line-height: 1;
+  margin-bottom: 16px;
+  letter-spacing: -0.03em;
+}
+
+.pageHeroSub {
+  font-size: 18px;
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: 0 auto 48px;
+  line-height: 1.6;
+}
+
+.heroCtas {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaPrimary {
+  display: inline-block;
+  background: var(--color-text-main);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: all 0.3s var(--ease-premium);
+}
+
+.ctaPrimary:hover {
+  background: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 102, 255, 0.15);
+}
+
+.ctaSecondary {
+  display: inline-block;
+  background: transparent;
+  color: var(--color-text-main);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 100px;
+  text-decoration: none;
+  border: 1px solid var(--color-border);
+  transition: all 0.3s var(--ease-premium);
+}
+
+.ctaSecondary:hover {
+  border-color: var(--color-text-main);
+  background: #f8f9fa;
+}
+
+/* ─── Sections ───────────────────────────── */
+.section {
+  padding: 100px 0;
+}
+
+.sectionAlt {
+  padding: 120px 0;
+  background-color: #f8f9fa;
+}
+
+.sectionTag {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.h2Center {
+  font-size: 48px;
+  font-weight: 500;
+  color: var(--color-text-main);
+  text-align: center;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.h2Sub {
+  font-size: 17px;
+  color: var(--color-text-secondary);
+  text-align: center;
+  max-width: 580px;
+  margin: 0 auto 64px;
+  line-height: 1.6;
+}
+
+/* ─── Feature Grid ─────────────────────── */
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 56px;
+}
+
+.featureCard {
+  background: #f8f9fc;
+  border-radius: 16px;
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 2px solid transparent;
+  transition: all 0.35s ease;
+}
+
+.featureCard:hover {
+  border-color: #003580;
+  background: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0, 31, 77, 0.09);
+}
+
+.featureIcon {
+  font-size: 36px;
+}
+
+.featureTitle {
+  font-size: 18px;
+  font-weight: 800;
+  color: #001f4d;
+}
+
+.featureText {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.65;
+}
+
+/* ─── Levels Grid ─────────────────────── */
+.levelsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-top: 56px;
+  background-color: var(--color-border);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.levelCard {
+  background: #fff;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  transition: background-color 0.2s ease;
+  position: relative;
+}
+
+.levelCard:hover {
+  background: #f7f9ff;
+}
+
+.cardNum {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.08em;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.7;
+}
+
+.levelTitle {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-text-main);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.levelText {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  flex: 1;
+  margin: 0;
+}
+
+/* ─── CTA Section ─────────────────────── */
+.pageHero {
+  padding: 120px 0 80px;
+  background-color: var(--color-bg);
+  text-align: center;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.pageHero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/germany-skyline.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.06;
+  z-index: -1;
+}
+
+.ctaSection {
+  padding: 120px 0;
+  background-color: #fff;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.ctaSection::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/germany-skyline.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.ctaHeader {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.ctaSectionTitle {
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--color-text-main);
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.ctaSectionSub {
+  font-size: 17px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.ctaCards {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background-color: var(--color-border);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ctaCard {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background-color: #fff;
+  padding: 28px 32px;
+  text-decoration: none;
+  color: var(--color-text-main);
+  transition: background-color 0.2s ease;
+}
+
+.ctaCard:hover {
+  background-color: #f7f9ff;
+}
+
+.ctaIconWrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: #f0f4ff;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ctaCardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.ctaCardContent strong {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.ctaCardContent span {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.ctaArrow {
+  font-size: 18px;
+  color: var(--color-text-secondary);
+  transition: transform 0.2s ease;
+}
+
+.ctaCard:hover .ctaArrow {
+  transform: translateX(4px);
+  color: var(--color-primary);
+}
+
+/* ─── Coming Soon Box ─────────────────── */
+.comingSoonBox {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 80px 60px;
+  background: #f8f9fc;
+  border-radius: 24px;
+  border: 2px dashed #d0d9e8;
+}
+
+.comingSoonIcon {
+  font-size: 64px;
+  margin-bottom: 24px;
+}
+
+.comingSoonTitle {
+  font-size: 32px;
+  font-weight: 900;
+  color: #001f4d;
+  margin-bottom: 20px;
+}
+
+.comingSoonText {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.ctaPrimaryDark {
+  display: inline-block;
+  background: #001f4d;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+  padding: 15px 36px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.ctaPrimaryDark:hover {
+  background: #003580;
+  transform: translateY(-2px);
+}
+
+.ctaOutline {
+  display: inline-block;
+  background: transparent;
+  color: #001f4d;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 15px 32px;
+  border-radius: 6px;
+  text-decoration: none;
+  border: 2px solid #001f4d;
+  transition: all 0.3s ease;
+}
+
+.ctaOutline:hover {
+  background: #001f4d;
+  color: #fff;
+}
+
+/* ─── Responsive ──────────────────────── */
+@media (max-width: 900px) {
+  .pageHeroTitle {
+    font-size: 40px;
+  }
+
+  .featureGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .levelsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .pageHeroTitle {
+    font-size: 32px;
+  }
+
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .levelsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .comingSoonBox {
+    padding: 40px 24px;
+  }
+
+  .h2Center {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,230 @@
+.main {
+  min-height: 100vh;
+  background: #fff;
+  padding-top: 140px;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ─── Page Hero ─────────────────────── */
+.pageHero {
+  padding: 100px 0 80px;
+  text-align: center;
+  background-color: var(--color-bg);
+}
+
+.heroBadge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 100px;
+  border: 1px solid var(--color-border);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
+}
+
+.pageHeroTitle {
+  font-size: 72px;
+  font-weight: 500;
+  color: var(--color-text-main);
+  line-height: 1;
+  margin-bottom: 24px;
+  letter-spacing: -0.03em;
+}
+
+.pageHeroSub {
+  font-size: 18px;
+  color: var(--color-text-secondary);
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ─── FAQ Section ───────────────────── */
+.faqSection {
+  padding: 80px 0 100px;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 64px;
+}
+
+.faqItem {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faqItem:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.faqOpen {
+  border-color: var(--color-primary);
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.faqQuestion {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  padding: 28px 32px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-text-main);
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 24px;
+  transition: all 0.2s;
+}
+
+.faqChevron {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  transition: all 0.3s ease;
+}
+
+.faqOpen .faqChevron {
+  transform: rotate(45deg);
+  color: var(--color-primary);
+}
+
+.faqAnswer {
+  padding: 0 32px 32px 32px;
+  animation: fadeDown 0.3s ease-out;
+}
+
+.faqAnswer p {
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── FAQ CTA ────────────────────────── */
+.faqCta {
+  margin-top: 40px;
+  padding-top: 60px;
+  border-top: 1px solid var(--color-border);
+}
+
+.ctaHeader {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.faqCta h3 {
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--color-text-main);
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.faqCta p {
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.ctaCards {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background-color: var(--color-border);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ctaCard {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background-color: #fff;
+  padding: 24px 32px;
+  text-decoration: none;
+  color: var(--color-text-main);
+  transition: background-color 0.2s ease;
+}
+
+.ctaCard:hover {
+  background-color: #f7f9ff;
+}
+
+.ctaIconWrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: #f0f4ff;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ctaCardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.ctaCardContent strong {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.ctaCardContent span {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.ctaArrow {
+  font-size: 18px;
+  color: var(--color-text-secondary);
+  transition: transform 0.2s ease;
+}
+
+.ctaCard:hover .ctaArrow {
+  transform: translateX(4px);
+  color: var(--color-primary);
+}
+
+@media (max-width: 640px) {
+  .pageHeroTitle { font-size: 36px; }
+  .faqQuestion { padding: 20px 20px; font-size: 15px; }
+  .faqAnswer { padding: 0 20px 20px; }
+  .faqCta { padding: 40px 24px; }
+}

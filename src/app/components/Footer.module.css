@@ -1,0 +1,94 @@
+.footer {
+  background-color: #fcfcfc;
+  color: var(--color-text-main);
+  padding: 80px 0 40px;
+  border-top: 1px solid var(--color-border);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 80px;
+  margin-bottom: 60px;
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+
+.footerLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+
+.logoImg {
+  height: 180px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brandTagline {
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  max-width: 320px;
+  margin: 0;
+}
+
+.linksCol h3,
+.contactCol h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-main);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+}
+
+.linksCol ul,
+.contactCol ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.linksCol ul li a,
+.contactCol ul li a {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.linksCol ul li a:hover,
+.contactCol ul li a:hover {
+  color: var(--color-primary);
+}
+
+.bottom {
+  border-top: 1px solid var(--color-border);
+  padding-top: 32px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}

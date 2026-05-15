@@ -1,0 +1,35 @@
+.reveal {
+  opacity: 0;
+  transition: all var(--duration-entrance) var(--ease-premium);
+  will-change: transform, opacity;
+}
+
+.visible {
+  opacity: 1;
+  transform: none !important;
+  clip-path: inset(0% 0 0 0) !important;
+  filter: blur(0) !important;
+}
+
+/* Animations */
+.fade-up {
+  transform: translateY(30px) scale(0.98);
+  filter: blur(4px);
+}
+
+.fade-in {
+  transform: scale(0.98);
+}
+
+.slide-left {
+  transform: translateX(-30px);
+}
+
+.slide-right {
+  transform: translateX(30px);
+}
+
+.clip-wipe {
+  clip-path: inset(100% 0 0 0);
+  opacity: 1; /* keep opacity 1 for the wipe effect */
+}

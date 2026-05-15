@@ -1,0 +1,35 @@
+.breadcrumbWrap {
+  background-color: #f5f5f5;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.crumb {
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.crumb:hover {
+  text-decoration: underline;
+  color: var(--color-text-main);
+}
+
+.separator {
+  margin: 0 10px;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+}
+
+.current {
+  color: var(--color-text-main);
+  font-weight: 500;
+}

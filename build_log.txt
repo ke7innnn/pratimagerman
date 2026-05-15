@@ -1,0 +1,341 @@
+
+> my-app@0.1.0 build
+> next build
+
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/kevinpimenta/package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /Users/kevinpimenta/Downloads/PRATIMA GERMAN /package-lock.json
+
+▲ Next.js 16.2.5 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 11 errors:
+./Downloads/PRATIMA GERMAN /src/app/about-us/page.module.css
+Error evaluating Node.js code
+Error: Cannot find module 'tailwindcss'
+Require stack:
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[turbopack]_runtime.js
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/postcss.js
+    [at Function._resolveFilename (node:internal/modules/cjs/loader:1225:15)]
+    [at Function._load (node:internal/modules/cjs/loader:1055:27)]
+    [at TracingChannel.traceSync (node:diagnostics_channel:322:14)]
+    [at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)]
+    [at Module.require (node:internal/modules/cjs/loader:1311:12)]
+    [at require (node:internal/modules/helpers:136:16)]
+    at require (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:160:33]
+    [at <anonymous>]
+    at map (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:155:35]
+    at init (turbopack:///[turbopack-node]/child_process/evaluate.ts:74:20) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0rua-~2._.js:429:26]
+
+Import trace:
+  Server Component:
+    ./Downloads/PRATIMA GERMAN /src/app/about-us/page.module.css
+    ./Downloads/PRATIMA GERMAN /src/app/about-us/page.tsx
+
+
+./Downloads/PRATIMA GERMAN /src/app/components/Breadcrumb.module.css
+Error evaluating Node.js code
+Error: Cannot find module 'tailwindcss'
+Require stack:
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[turbopack]_runtime.js
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/postcss.js
+    [at Function._resolveFilename (node:internal/modules/cjs/loader:1225:15)]
+    [at Function._load (node:internal/modules/cjs/loader:1055:27)]
+    [at TracingChannel.traceSync (node:diagnostics_channel:322:14)]
+    [at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)]
+    [at Module.require (node:internal/modules/cjs/loader:1311:12)]
+    [at require (node:internal/modules/helpers:136:16)]
+    at require (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:160:33]
+    [at <anonymous>]
+    at map (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:155:35]
+    at init (turbopack:///[turbopack-node]/child_process/evaluate.ts:74:20) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0rua-~2._.js:429:26]
+
+Import trace:
+  Server Component:
+    ./Downloads/PRATIMA GERMAN /src/app/components/Breadcrumb.module.css
+    ./Downloads/PRATIMA GERMAN /src/app/components/Breadcrumb.tsx
+    ./Downloads/PRATIMA GERMAN /src/app/german-courses/page.tsx
+
+
+./Downloads/PRATIMA GERMAN /src/app/components/CustomCursor.module.css
+Error evaluating Node.js code
+Error: Cannot find module 'tailwindcss'
+Require stack:
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[turbopack]_runtime.js
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/postcss.js
+    [at Function._resolveFilename (node:internal/modules/cjs/loader:1225:15)]
+    [at Function._load (node:internal/modules/cjs/loader:1055:27)]
+    [at TracingChannel.traceSync (node:diagnostics_channel:322:14)]
+    [at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)]
+    [at Module.require (node:internal/modules/cjs/loader:1311:12)]
+    [at require (node:internal/modules/helpers:136:16)]
+    at require (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:160:33]
+    [at <anonymous>]
+    at map (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:155:35]
+    at init (turbopack:///[turbopack-node]/child_process/evaluate.ts:74:20) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0rua-~2._.js:429:26]
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/PRATIMA GERMAN /src/app/components/CustomCursor.module.css [Client Component Browser]
+    ./Downloads/PRATIMA GERMAN /src/app/components/CustomCursor.tsx [Client Component Browser]
+    ./Downloads/PRATIMA GERMAN /src/app/components/CustomCursor.tsx [Server Component]
+    ./Downloads/PRATIMA GERMAN /src/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/PRATIMA GERMAN /src/app/components/CustomCursor.module.css [Client Component SSR]
+    ./Downloads/PRATIMA GERMAN /src/app/components/CustomCursor.tsx [Client Component SSR]
+    ./Downloads/PRATIMA GERMAN /src/app/components/CustomCursor.tsx [Server Component]
+    ./Downloads/PRATIMA GERMAN /src/app/layout.tsx [Server Component]
+
+
+./Downloads/PRATIMA GERMAN /src/app/components/Footer.module.css
+Error evaluating Node.js code
+Error: Cannot find module 'tailwindcss'
+Require stack:
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[turbopack]_runtime.js
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/postcss.js
+    [at Function._resolveFilename (node:internal/modules/cjs/loader:1225:15)]
+    [at Function._load (node:internal/modules/cjs/loader:1055:27)]
+    [at TracingChannel.traceSync (node:diagnostics_channel:322:14)]
+    [at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)]
+    [at Module.require (node:internal/modules/cjs/loader:1311:12)]
+    [at require (node:internal/modules/helpers:136:16)]
+    at require (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:160:33]
+    [at <anonymous>]
+    at map (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:155:35]
+    at init (turbopack:///[turbopack-node]/child_process/evaluate.ts:74:20) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0rua-~2._.js:429:26]
+
+Import trace:
+  Server Component:
+    ./Downloads/PRATIMA GERMAN /src/app/components/Footer.module.css
+    ./Downloads/PRATIMA GERMAN /src/app/components/Footer.tsx
+    ./Downloads/PRATIMA GERMAN /src/app/page.tsx
+
+
+./Downloads/PRATIMA GERMAN /src/app/components/MainNavigation.module.css
+Error evaluating Node.js code
+Error: Cannot find module 'tailwindcss'
+Require stack:
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[turbopack]_runtime.js
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/postcss.js
+    [at Function._resolveFilename (node:internal/modules/cjs/loader:1225:15)]
+    [at Function._load (node:internal/modules/cjs/loader:1055:27)]
+    [at TracingChannel.traceSync (node:diagnostics_channel:322:14)]
+    [at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)]
+    [at Module.require (node:internal/modules/cjs/loader:1311:12)]
+    [at require (node:internal/modules/helpers:136:16)]
+    at require (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:160:33]
+    [at <anonymous>]
+    at map (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:155:35]
+    at init (turbopack:///[turbopack-node]/child_process/evaluate.ts:74:20) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0rua-~2._.js:429:26]
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/PRATIMA GERMAN /src/app/components/MainNavigation.module.css [Client Component Browser]
+    ./Downloads/PRATIMA GERMAN /src/app/components/MainNavigation.tsx [Client Component Browser]
+    ./Downloads/PRATIMA GERMAN /src/app/components/MainNavigation.tsx [Server Component]
+    ./Downloads/PRATIMA GERMAN /src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/PRATIMA GERMAN /src/app/components/MainNavigation.module.css [Client Component SSR]
+    ./Downloads/PRATIMA GERMAN /src/app/components/MainNavigation.tsx [Client Component SSR]
+    ./Downloads/PRATIMA GERMAN /src/app/components/MainNavigation.tsx [Server Component]
+    ./Downloads/PRATIMA GERMAN /src/app/page.tsx [Server Component]
+
+
+./Downloads/PRATIMA GERMAN /src/app/components/Reveal.module.css
+Error evaluating Node.js code
+Error: Cannot find module 'tailwindcss'
+Require stack:
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[turbopack]_runtime.js
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/postcss.js
+    [at Function._resolveFilename (node:internal/modules/cjs/loader:1225:15)]
+    [at Function._load (node:internal/modules/cjs/loader:1055:27)]
+    [at TracingChannel.traceSync (node:diagnostics_channel:322:14)]
+    [at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)]
+    [at Module.require (node:internal/modules/cjs/loader:1311:12)]
+    [at require (node:internal/modules/helpers:136:16)]
+    at require (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:160:33]
+    [at <anonymous>]
+    at map (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:155:35]
+    at init (turbopack:///[turbopack-node]/child_process/evaluate.ts:74:20) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0rua-~2._.js:429:26]
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/PRATIMA GERMAN /src/app/components/Reveal.module.css [Client Component Browser]
+    ./Downloads/PRATIMA GERMAN /src/app/components/Reveal.tsx [Client Component Browser]
+    ./Downloads/PRATIMA GERMAN /src/app/components/Reveal.tsx [Server Component]
+    ./Downloads/PRATIMA GERMAN /src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/PRATIMA GERMAN /src/app/components/Reveal.module.css [Client Component SSR]
+    ./Downloads/PRATIMA GERMAN /src/app/components/Reveal.tsx [Client Component SSR]
+    ./Downloads/PRATIMA GERMAN /src/app/components/Reveal.tsx [Server Component]
+    ./Downloads/PRATIMA GERMAN /src/app/page.tsx [Server Component]
+
+
+./Downloads/PRATIMA GERMAN /src/app/components/TopUtilityBar.module.css
+Error evaluating Node.js code
+Error: Cannot find module 'tailwindcss'
+Require stack:
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[turbopack]_runtime.js
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/postcss.js
+    [at Function._resolveFilename (node:internal/modules/cjs/loader:1225:15)]
+    [at Function._load (node:internal/modules/cjs/loader:1055:27)]
+    [at TracingChannel.traceSync (node:diagnostics_channel:322:14)]
+    [at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)]
+    [at Module.require (node:internal/modules/cjs/loader:1311:12)]
+    [at require (node:internal/modules/helpers:136:16)]
+    at require (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:160:33]
+    [at <anonymous>]
+    at map (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:155:35]
+    at init (turbopack:///[turbopack-node]/child_process/evaluate.ts:74:20) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0rua-~2._.js:429:26]
+
+Import trace:
+  Server Component:
+    ./Downloads/PRATIMA GERMAN /src/app/components/TopUtilityBar.module.css
+    ./Downloads/PRATIMA GERMAN /src/app/components/TopUtilityBar.tsx
+    ./Downloads/PRATIMA GERMAN /src/app/page.tsx
+
+
+./Downloads/PRATIMA GERMAN /src/app/contact-us/page.module.css
+Error evaluating Node.js code
+Error: Cannot find module 'tailwindcss'
+Require stack:
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[turbopack]_runtime.js
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/postcss.js
+    [at Function._resolveFilename (node:internal/modules/cjs/loader:1225:15)]
+    [at Function._load (node:internal/modules/cjs/loader:1055:27)]
+    [at TracingChannel.traceSync (node:diagnostics_channel:322:14)]
+    [at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)]
+    [at Module.require (node:internal/modules/cjs/loader:1311:12)]
+    [at require (node:internal/modules/helpers:136:16)]
+    at require (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:160:33]
+    [at <anonymous>]
+    at map (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:155:35]
+    at init (turbopack:///[turbopack-node]/child_process/evaluate.ts:74:20) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0rua-~2._.js:429:26]
+
+Import trace:
+  Server Component:
+    ./Downloads/PRATIMA GERMAN /src/app/contact-us/page.module.css
+    ./Downloads/PRATIMA GERMAN /src/app/contact-us/page.tsx
+
+
+./Downloads/PRATIMA GERMAN /src/app/german-courses/page.module.css
+Error evaluating Node.js code
+Error: Cannot find module 'tailwindcss'
+Require stack:
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[turbopack]_runtime.js
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/postcss.js
+    [at Function._resolveFilename (node:internal/modules/cjs/loader:1225:15)]
+    [at Function._load (node:internal/modules/cjs/loader:1055:27)]
+    [at TracingChannel.traceSync (node:diagnostics_channel:322:14)]
+    [at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)]
+    [at Module.require (node:internal/modules/cjs/loader:1311:12)]
+    [at require (node:internal/modules/helpers:136:16)]
+    at require (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:160:33]
+    [at <anonymous>]
+    at map (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:155:35]
+    at init (turbopack:///[turbopack-node]/child_process/evaluate.ts:74:20) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0rua-~2._.js:429:26]
+
+Import trace:
+  Server Component:
+    ./Downloads/PRATIMA GERMAN /src/app/german-courses/page.module.css
+    ./Downloads/PRATIMA GERMAN /src/app/german-courses/page.tsx
+
+
+./Downloads/PRATIMA GERMAN /src/app/globals.css
+Error evaluating Node.js code
+Error: Cannot find module 'tailwindcss'
+Require stack:
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[turbopack]_runtime.js
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/postcss.js
+    [at Function._resolveFilename (node:internal/modules/cjs/loader:1225:15)]
+    [at Function._load (node:internal/modules/cjs/loader:1055:27)]
+    [at TracingChannel.traceSync (node:diagnostics_channel:322:14)]
+    [at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)]
+    [at Module.require (node:internal/modules/cjs/loader:1311:12)]
+    [at require (node:internal/modules/helpers:136:16)]
+    at require (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:160:33]
+    [at <anonymous>]
+    at map (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:155:35]
+    at init (turbopack:///[turbopack-node]/child_process/evaluate.ts:74:20) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0rua-~2._.js:429:26]
+
+Import trace:
+  Client Component Browser:
+    ./Downloads/PRATIMA GERMAN /src/app/globals.css [Client Component Browser]
+    ./Downloads/PRATIMA GERMAN /src/app/layout.tsx [Server Component]
+
+
+./Downloads/PRATIMA GERMAN /src/app/page.module.css
+Error evaluating Node.js code
+Error: Cannot find module 'tailwindcss'
+Require stack:
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[turbopack]_runtime.js
+- /Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/postcss.js
+    [at Function._resolveFilename (node:internal/modules/cjs/loader:1225:15)]
+    [at Function._load (node:internal/modules/cjs/loader:1055:27)]
+    [at TracingChannel.traceSync (node:diagnostics_channel:322:14)]
+    [at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)]
+    [at Module.require (node:internal/modules/cjs/loader:1311:12)]
+    [at require (node:internal/modules/helpers:136:16)]
+    at require (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:160:33]
+    [at <anonymous>]
+    at map (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:155:35]
+    at init (turbopack:///[turbopack-node]/child_process/evaluate.ts:74:20) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0rua-~2._.js:429:26]
+
+Import trace:
+  Server Component:
+    ./Downloads/PRATIMA GERMAN /src/app/page.module.css
+    ./Downloads/PRATIMA GERMAN /src/app/page.tsx
+
+
+    at require (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:160:33])
+    at map (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:155:35])
+    at init (turbopack:///[turbopack-node]/child_process/evaluate.ts:74:20) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0rua-~2._.js:429:26])
+    at require (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:160:33])
+    at map (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:155:35])
+    at init (turbopack:///[turbopack-node]/child_process/evaluate.ts:74:20) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0rua-~2._.js:429:26])
+    at require (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:160:33])
+    at map (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:155:35])
+    at init (turbopack:///[turbopack-node]/child_process/evaluate.ts:74:20) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0rua-~2._.js:429:26])
+    at require (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:160:33])
+    at map (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:155:35])
+    at init (turbopack:///[turbopack-node]/child_process/evaluate.ts:74:20) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0rua-~2._.js:429:26])
+    at require (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:160:33])
+    at map (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:155:35])
+    at init (turbopack:///[turbopack-node]/child_process/evaluate.ts:74:20) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0rua-~2._.js:429:26])
+    at require (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:160:33])
+    at map (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:155:35])
+    at init (turbopack:///[turbopack-node]/child_process/evaluate.ts:74:20) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0rua-~2._.js:429:26])
+    at require (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:160:33])
+    at map (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:155:35])
+    at init (turbopack:///[turbopack-node]/child_process/evaluate.ts:74:20) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0rua-~2._.js:429:26])
+    at require (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:160:33])
+    at map (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:155:35])
+    at init (turbopack:///[turbopack-node]/child_process/evaluate.ts:74:20) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0rua-~2._.js:429:26])
+    at require (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:160:33])
+    at map (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:155:35])
+    at init (turbopack:///[turbopack-node]/child_process/evaluate.ts:74:20) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0rua-~2._.js:429:26])
+    at require (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:160:33])
+    at map (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:155:35])
+    at init (turbopack:///[turbopack-node]/child_process/evaluate.ts:74:20) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0rua-~2._.js:429:26])
+    at require (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:160:33])
+    at map (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0iv9ksq._.js:155:35])
+    at init (turbopack:///[turbopack-node]/child_process/evaluate.ts:74:20) [/Users/kevinpimenta/Downloads/PRATIMA GERMAN /.next/build/chunks/[root-of-the-server]__0rua-~2._.js:429:26])
