@@ -1,12 +1,72 @@
+'use client';
+
+import { useRef } from 'react';
+import Link from 'next/link';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import TopUtilityBar from '../components/TopUtilityBar';
 import MainNavigation from '../components/MainNavigation';
 import Footer from '../components/Footer';
-import Reveal from '../components/Reveal';
 import styles from './page.module.css';
 
+const contactMethods = [
+  {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+      </svg>
+    ),
+    title: 'Call or WhatsApp',
+    desc: 'Speak directly with our advisors',
+    lines: ['🇮🇳 +91 9967745988', '🇶🇦 +974 70757220'],
+    href: ['tel:+919967745988', 'tel:+97470757220'],
+  },
+  {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect width="20" height="16" x="2" y="4" rx="2" />
+        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+      </svg>
+    ),
+    title: 'Email Us',
+    desc: 'We reply within 24 hours',
+    lines: ['thedeutschhub@gmail.com'],
+    href: ['mailto:thedeutschhub@gmail.com'],
+  },
+  {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <polyline points="12 6 12 12 16 14" />
+      </svg>
+    ),
+    title: 'Office Hours',
+    desc: 'We are available 6 days a week',
+    lines: ['Mon – Sat: 9 AM – 8 PM', 'Sunday: Closed'],
+    href: [],
+  },
+  {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect width="8" height="18" x="3" y="3" rx="2" />
+        <rect width="8" height="18" x="13" y="3" rx="2" />
+        <path d="M9 9h.01M9 13h.01M15 9h.01M15 13h.01" />
+      </svg>
+    ),
+    title: 'Registered Offices',
+    desc: 'Our official locations',
+    lines: ['🇮🇳 Mumbai, MH (Registered)', '🇶🇦 Doha, Qatar (Corporate)'],
+    href: [],
+  },
+];
+
 export default function ContactUs() {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({ target: containerRef, offset: ['start start', 'end end'] });
+  const heroY = useTransform(scrollYProgress, [0, 0.25], ['0%', '30%']);
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.18], [1, 0]);
+
   return (
-    <>
+    <div ref={containerRef} className={styles.mainWrapper}>
       <header>
         <TopUtilityBar />
         <MainNavigation />
@@ -14,168 +74,210 @@ export default function ContactUs() {
 
       <main className={styles.main}>
 
-        {/* Page Hero */}
-        <div className={styles.pageHero}>
-          <div className={styles.container}>
-            <Reveal animation="fade-up">
-              <span className={styles.heroBadge}>Get In Touch</span>
-              <h1 className={styles.pageHeroTitle}>Contact Us</h1>
-              <p className={styles.pageHeroSub}>
-                Reach us directly on below contact points or send a message using the enquiry form to discuss our courses and other fees // discounts // offers related information.
-              </p>
-            </Reveal>
-          </div>
-        </div>
+        {/* ── CINEMATIC HERO ── */}
+        <section className={styles.heroSection}>
+          <motion.div className={styles.heroImageBg} style={{ y: heroY }}>
+            <img
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=2400"
+              alt="Contact Pratima German Language Institute"
+            />
+          </motion.div>
+          <div className={styles.heroOverlay} />
 
-        {/* Quick Contact Cards */}
-        <div className={styles.quickCards}>
+          {/* Floating info card */}
+          <motion.div
+            className={styles.floatAccent}
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <div className={styles.floatAccentDot} />
+            <span>Available Mon – Sat · 9AM–8PM</span>
+          </motion.div>
+
+          <motion.div style={{ opacity: heroOpacity }} className={styles.heroContent}>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              className={styles.heroBadge}
+            >
+              <span>GET IN TOUCH</span>
+            </motion.div>
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+              className={styles.h1}
+            >
+              Start Your<br />German Journey
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 25 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
+              className={styles.heroSubText}
+            >
+              Reach us directly or send a message — discuss courses, fees, and current offers with our friendly team.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.38, ease: [0.16, 1, 0.3, 1] }}
+              className={styles.heroBtns}
+            >
+              <a href="#contact-form" className={styles.btnPrimary}>Send a Message</a>
+              <a href="https://wa.me/97470757220" target="_blank" rel="noopener noreferrer" className={styles.btnOutline}>WhatsApp Us</a>
+            </motion.div>
+          </motion.div>
+
+          <div className={styles.heroScrollHint}>
+            <span>Scroll</span>
+            <div className={styles.scrollLine} />
+          </div>
+        </section>
+
+        {/* ── CONTACT METHODS BAR ── */}
+        <section className={styles.methodsBar}>
           <div className={styles.container}>
-            <div className={styles.quickGrid}>
-              <Reveal animation="fade-up" delay={100}>
-                <a href="tel:+919967745988" className={styles.quickCard}>
-                  <div className={styles.quickIconWrap}>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.81a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div className={styles.methodsGrid}>
+              {contactMethods.map((m, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                  viewport={{ once: true }}
+                  className={styles.methodCard}
+                >
+                  <span className={styles.methodIcon}>{m.icon}</span>
+                  <div className={styles.methodBody}>
+                    <h3>{m.title}</h3>
+                    <p>{m.desc}</p>
+                    {m.lines.map((line, li) =>
+                      m.href[li] ? (
+                        <a key={li} href={m.href[li]} className={styles.methodLink}>{line}</a>
+                      ) : (
+                        <span key={li} className={styles.methodText}>{line}</span>
+                      )
+                    )}
                   </div>
-                  <div className={styles.quickCardContent}>
-                    <strong>Call / WhatsApp</strong>
-                    <span>+91 9967745988</span>
-                    <span>+974 70757220</span>
-                  </div>
-                  <span className={styles.quickAction}>Tap to Call →</span>
-                </a>
-              </Reveal>
-              <Reveal animation="fade-up" delay={200}>
-                <a href="mailto:thedeutschhub@gmail.com" className={styles.quickCard}>
-                  <div className={styles.quickIconWrap}>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                  </div>
-                  <div className={styles.quickCardContent}>
-                    <strong>Email Address</strong>
-                    <span>thedeutschhub@gmail.com</span>
-                  </div>
-                  <span className={styles.quickAction}>Send Email →</span>
-                </a>
-              </Reveal>
-              <Reveal animation="fade-up" delay={300}>
-                <div className={styles.quickCard}>
-                  <div className={styles.quickIconWrap}>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                  </div>
-                  <div className={styles.quickCardContent}>
-                    <strong>Location</strong>
-                    <span>Online — Available Worldwide</span>
-                    <span className={styles.statusBadge}>Offline classes coming soon</span>
-                  </div>
-                </div>
-              </Reveal>
+                </motion.div>
+              ))}
             </div>
           </div>
-        </div>
+        </section>
 
-        {/* Main Layout */}
-        <div className={styles.mainLayout}>
-          <div className={styles.container}>
-            <div className={styles.splitLayout}>
+        {/* ── SPLIT: IMAGE + FORM ── */}
+        <section id="contact-form" className={styles.contactSection}>
+          <div className={styles.splitLayout}>
 
-              {/* Left: Info */}
-              <div className={styles.infoColumn}>
-                <Reveal animation="fade-up" delay={100}>
-                  <div className={styles.infoBlock}>
-                    <h3>For Course Details</h3>
-                    <p>Contact us via <strong>call or WhatsApp</strong> to know the upcoming batch schedule, fee structure, and current offers.</p>
-                    <a href="tel:+919967745988" className={styles.infoLink}>+91 9967745988</a>
-                    <a href="tel:+97470757220" className={styles.infoLink}>+974 70757220</a>
-                    <a href="mailto:thedeutschhub@gmail.com" className={styles.infoLink}>thedeutschhub@gmail.com</a>
-                  </div>
-                </Reveal>
-
-                <Reveal animation="fade-up" delay={200}>
-                  <div className={styles.infoBlock}>
-                    <h3>Teaching Mode</h3>
-                    <div className={styles.modeTag}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                      Online — Available Now
-                    </div>
-                    <div className={styles.modeTagSoon}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                      Offline — Coming Soon
-                    </div>
-                  </div>
-                </Reveal>
-
-                <Reveal animation="fade-up" delay={300}>
-                  <div className={styles.infoBlock}>
-                    <h3>Payment Options</h3>
-                    <p>Installment options available for 3+ levels. Contact us for payment methods and current offers.</p>
-                  </div>
-                </Reveal>
-
-                <Reveal animation="fade-up" delay={400}>
-                  <div className={styles.infoBlock}>
-                    <h3>Batch Hours</h3>
-                    <p>Multiple flexible batch slots available. Contact us for the current schedule that suits you best.</p>
-                  </div>
-                </Reveal>
+            {/* Left: Lifestyle image stack */}
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true }}
+              className={styles.imageStack}
+            >
+              <div className={styles.imgMain}>
+                <img
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=900"
+                  alt="Students learning German together"
+                />
               </div>
+              <motion.div
+                className={styles.imgFloating}
+                animate={{ y: [0, -12, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400"
+                  alt="German teacher instructor"
+                />
+              </motion.div>
+              <div className={styles.imgStat}>
+                <strong>★</strong>
+                <p>Goethe Certified</p>
+              </div>
+            </motion.div>
 
-              {/* Right: Form */}
-              <Reveal animation="slide-right" delay={200}>
-                <div className={styles.formColumn}>
+            {/* Right: Form */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true }}
+              className={styles.formColumn}
+            >
+              <div className={styles.formBox}>
+                <div className={styles.formHeader}>
+                  <span className={styles.formBadge}>ENQUIRY FORM</span>
                   <h2 className={styles.formTitle}>Send an Enquiry</h2>
-                  <p className={styles.formSub}>We&rsquo;ll get back to you within 24 hours.</p>
-                  <form className={styles.contactForm}>
-                    <div className={styles.formGroup}>
-                      <label htmlFor="name">Full Name *</label>
-                      <input type="text" id="name" placeholder="e.g. Rahul Sharma" required />
-                    </div>
-                    <div className={styles.formGroup}>
-                      <label htmlFor="phone">Phone / WhatsApp *</label>
-                      <input type="tel" id="phone" placeholder="+91 XXXXXXXXXX" required />
-                    </div>
-                    <div className={styles.formGroup}>
-                      <label htmlFor="email">Email Address</label>
-                      <input type="email" id="email" placeholder="your@email.com" />
-                    </div>
-                    <div className={styles.formGroup}>
-                      <label htmlFor="interest">I&rsquo;m interested in *</label>
-                      <select id="interest" required>
-                        <option value="" disabled>Select an option</option>
-                        <option>Online German Course</option>
-                        <option>Offline German Course (Coming Soon)</option>
-                        <option>Exam Preparation (Goethe / TestDaF / TELC / ÖSD)</option>
-                        <option>Corporate Training</option>
-                        <option>1-on-1 Private Classes</option>
-                        <option>Group Classes</option>
-                        <option>General Enquiry</option>
-                      </select>
-                    </div>
-                    <div className={styles.formGroup}>
-                      <label htmlFor="level">Current German Level</label>
-                      <select id="level">
-                        <option value="">Complete Beginner</option>
-                        <option>Beginner</option>
-                        <option>Intermediate</option>
-                        <option>Advanced</option>
-                      </select>
-                    </div>
-                    <div className={styles.formGroup}>
-                      <label htmlFor="message">Message (Optional)</label>
-                      <textarea id="message" rows={4} placeholder="Any specific questions or requirements..."></textarea>
-                    </div>
-                    <button type="submit" className={styles.submitBtn}>
-                      Send Enquiry →
-                    </button>
-                  </form>
+                  <p className={styles.formSubText}>We&apos;ll get back to you within 24 hours.</p>
                 </div>
-              </Reveal>
 
-            </div>
+                <form className={styles.contactForm}>
+                  <div className={styles.formRow}>
+                    <div className={styles.formGroup}>
+                      <label htmlFor="name">Full Name</label>
+                      <input type="text" id="name" placeholder="Rahul Sharma" required />
+                    </div>
+                    <div className={styles.formGroup}>
+                      <label htmlFor="phone">WhatsApp Number</label>
+                      <input type="tel" id="phone" placeholder="+91 00000 00000" required />
+                    </div>
+                  </div>
+
+                  <div className={styles.formGroup}>
+                    <label htmlFor="email">Email Address</label>
+                    <input type="email" id="email" placeholder="hello@example.com" required />
+                  </div>
+
+                  <div className={styles.formGroup}>
+                    <label htmlFor="interest">Interested In</label>
+                    <select id="interest" required defaultValue="">
+                      <option value="" disabled>Select a course</option>
+                      <option>Online Classes (Live)</option>
+                      <option>Offline Classes (In-Person)</option>
+                      <option>Goethe Exam Prep</option>
+                      <option>Corporate Training</option>
+                      <option>1-on-1 Private Sessions</option>
+                    </select>
+                  </div>
+
+                  <div className={styles.formGroup}>
+                    <label htmlFor="level">Current Level</label>
+                    <select id="level" defaultValue="">
+                      <option value="" disabled>Select your level</option>
+                      <option>Complete Beginner (A1)</option>
+                      <option>Elementary (A2)</option>
+                      <option>Intermediate (B1)</option>
+                      <option>Upper-Intermediate (B2)</option>
+                      <option>Advanced (C1)</option>
+                      <option>Mastery (C2)</option>
+                    </select>
+                  </div>
+
+                  <div className={styles.formGroup}>
+                    <label htmlFor="message">Message (Optional)</label>
+                    <textarea id="message" rows={4} placeholder="Tell us about your goals..."></textarea>
+                  </div>
+
+                  <button type="submit" className={styles.submitBtn}>
+                    <span>Send Message</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </button>
+                </form>
+              </div>
+            </motion.div>
+
           </div>
-        </div>
+        </section>
 
       </main>
 
       <Footer />
-    </>
+    </div>
   );
 }

@@ -17,8 +17,7 @@ export default function WhatsAppButton() {
 
   return (
     <a
-      href="https://wa.me/97470757220"
-      target="_blank"
+      href="https://wa.me/97470757220?text=Hi!%20I%20want%20to%20enquire%20about%20German%20classes."
       rel="noopener noreferrer"
       className={styles.whatsappButton}
       aria-label="Chat with us on WhatsApp"
