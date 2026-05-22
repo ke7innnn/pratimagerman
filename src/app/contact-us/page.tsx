@@ -1,12 +1,14 @@
 'use client';
 
-import { useRef } from 'react';
-import Link from 'next/link';
+import { useRef, useState } from 'react';
+
 import { motion, useScroll, useTransform } from 'framer-motion';
 import TopUtilityBar from '../components/TopUtilityBar';
 import MainNavigation from '../components/MainNavigation';
 import Footer from '../components/Footer';
 import styles from './page.module.css';
+
+const CONTACT_EMAIL = 'thedeutschhub@gmail.com';
 
 const contactMethods = [
   {
@@ -64,6 +66,32 @@ export default function ContactUs() {
   const { scrollYProgress } = useScroll({ target: containerRef, offset: ['start start', 'end end'] });
   const heroY = useTransform(scrollYProgress, [0, 0.25], ['0%', '30%']);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.18], [1, 0]);
+
+  // Controlled form state
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
+  const [interest, setInterest] = useState('');
+  const [level, setLevel] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const subject = encodeURIComponent(`Course Enquiry from ${name || 'Website Visitor'}`);
+    const body = encodeURIComponent(
+      `Hello Pratima German Language Institute,\n\nI am interested in learning more about your German courses. Here are my details:\n\n` +
+      `Name: ${name}\n` +
+      `WhatsApp Number: ${phone}\n` +
+      `Email: ${email}\n` +
+      `Interested In: ${interest || 'Not specified'}\n` +
+      `Current Level: ${level || 'Not specified'}\n` +
+      `Message: ${message || 'No additional message'}\n\n` +
+      `Please get in touch with me at your earliest convenience.\n\nThank you!`
+    );
+
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+  };
 
   return (
     <div ref={containerRef} className={styles.mainWrapper}>
@@ -217,26 +245,52 @@ export default function ContactUs() {
                   <p className={styles.formSubText}>We&apos;ll get back to you within 24 hours.</p>
                 </div>
 
-                <form className={styles.contactForm}>
+                <form className={styles.contactForm} onSubmit={handleSubmit}>
                   <div className={styles.formRow}>
                     <div className={styles.formGroup}>
                       <label htmlFor="name">Full Name</label>
-                      <input type="text" id="name" placeholder="Rahul Sharma" required />
+                      <input
+                        type="text"
+                        id="name"
+                        placeholder="Rahul Sharma"
+                        required
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                      />
                     </div>
                     <div className={styles.formGroup}>
                       <label htmlFor="phone">WhatsApp Number</label>
-                      <input type="tel" id="phone" placeholder="+91 00000 00000" required />
+                      <input
+                        type="tel"
+                        id="phone"
+                        placeholder="+91 00000 00000"
+                        required
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                      />
                     </div>
                   </div>
 
                   <div className={styles.formGroup}>
                     <label htmlFor="email">Email Address</label>
-                    <input type="email" id="email" placeholder="hello@example.com" required />
+                    <input
+                      type="email"
+                      id="email"
+                      placeholder="hello@example.com"
+                      required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
                   </div>
 
                   <div className={styles.formGroup}>
                     <label htmlFor="interest">Interested In</label>
-                    <select id="interest" required defaultValue="">
+                    <select
+                      id="interest"
+                      required
+                      value={interest}
+                      onChange={(e) => setInterest(e.target.value)}
+                    >
                       <option value="" disabled>Select a course</option>
                       <option>Online Classes (Live)</option>
                       <option>Offline Classes (In-Person)</option>
@@ -248,7 +302,11 @@ export default function ContactUs() {
 
                   <div className={styles.formGroup}>
                     <label htmlFor="level">Current Level</label>
-                    <select id="level" defaultValue="">
+                    <select
+                      id="level"
+                      value={level}
+                      onChange={(e) => setLevel(e.target.value)}
+                    >
                       <option value="" disabled>Select your level</option>
                       <option>Complete Beginner (A1)</option>
                       <option>Elementary (A2)</option>
@@ -261,7 +319,13 @@ export default function ContactUs() {
 
                   <div className={styles.formGroup}>
                     <label htmlFor="message">Message (Optional)</label>
-                    <textarea id="message" rows={4} placeholder="Tell us about your goals..."></textarea>
+                    <textarea
+                      id="message"
+                      rows={4}
+                      placeholder="Tell us about your goals..."
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                    />
                   </div>
 
                   <button type="submit" className={styles.submitBtn}>
