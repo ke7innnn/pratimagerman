@@ -9,6 +9,9 @@ import MainNavigation from '../components/MainNavigation';
 import Footer from '../components/Footer';
 import styles from './page.module.css';
 import onlineHero from '../../../public/hero/online.webp';
+import studentsStudying from '../../../public/images/students-studying.webp';
+import germanBooks from '../../../public/images/german-books.webp';
+import studentsDiscussing from '../../../public/images/students-discussing.webp';
 
 const levels = [
   { id: 'A1', title: 'Beginner', desc: 'No prior knowledge needed. Learn to introduce yourself, use basic phrases, and understand simple everyday expressions.', tier: 'foundation', tierLabel: 'Foundation' },
@@ -211,9 +214,10 @@ export default function OnlineCoursePage() {
               className={styles.imageryItem}
             >
               <Image
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600"
+                src={studentsStudying}
                 alt="Student studying German online"
                 fill
+                placeholder="blur"
                 style={{ objectFit: 'cover' }}
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
@@ -227,9 +231,10 @@ export default function OnlineCoursePage() {
               className={`${styles.imageryItem} ${styles.imageryItemTall}`}
             >
               <Image
-                src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=600"
+                src={germanBooks}
                 alt="German language books and notes"
                 fill
+                placeholder="blur"
                 style={{ objectFit: 'cover' }}
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
@@ -243,9 +248,10 @@ export default function OnlineCoursePage() {
               className={styles.imageryItem}
             >
               <Image
-                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=600"
+                src={studentsDiscussing}
                 alt="Student celebrating success"
                 fill
+                placeholder="blur"
                 style={{ objectFit: 'cover' }}
                 sizes="(max-width: 768px) 100vw, 33vw"
               />

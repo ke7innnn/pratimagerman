@@ -9,6 +9,7 @@ import MainNavigation from '../components/MainNavigation';
 import Footer from '../components/Footer';
 import styles from './page.module.css';
 import contactHero from '../../../public/hero/online.webp';
+import studentsStudying from '../../../public/images/students-studying.webp';
 
 const CONTACT_EMAIL = 'thedeutschhub@gmail.com';
 
@@ -217,9 +218,10 @@ export default function ContactUs() {
             >
               <div className={styles.imgMain}>
                 <Image
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=900"
+                  src={studentsStudying}
                   alt="Students learning German together"
                   fill
+                  placeholder="blur"
                   style={{ objectFit: 'cover' }}
                   sizes="(max-width: 1100px) 100vw, 50vw"
                 />

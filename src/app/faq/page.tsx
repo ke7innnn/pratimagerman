@@ -9,6 +9,7 @@ import MainNavigation from '../components/MainNavigation';
 import Footer from '../components/Footer';
 import styles from './page.module.css';
 import faqHero from '../../../public/hero/faq.webp';
+import studentsDiscussing from '../../../public/images/students-discussing.webp';
 
 const faqs = [
   {
@@ -134,9 +135,10 @@ export default function FAQPage() {
               </div>
               <div className={styles.sideImage}>
                 <Image
-                  src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=600"
+                  src={studentsDiscussing}
                   alt="Students discussing German"
                   fill
+                  placeholder="blur"
                   style={{ objectFit: 'cover' }}
                   sizes="(max-width: 1300px) 100vw, 280px"
                 />

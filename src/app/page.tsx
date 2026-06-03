@@ -9,6 +9,12 @@ import MainNavigation from './components/MainNavigation';
 import Footer from './components/Footer';
 import styles from './page.module.css';
 import homeHero from '../../public/hero/home.webp';
+import bentoStudy from '../../public/images/bento-study.webp';
+import bentoCorporate from '../../public/images/bento-corporate.webp';
+import bentoSpeaking from '../../public/images/bento-speaking.webp';
+import masonryGermany from '../../public/images/masonry-germany.webp';
+import masonryBerlin from '../../public/images/masonry-berlin.webp';
+import masonryMunich from '../../public/images/masonry-munich.webp';
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -96,7 +102,7 @@ export default function Home() {
                 className={`${styles.bentoBox} ${styles.bentoLarge}`}
               >
                 <div className={styles.bentoImgWrap}>
-                  <Image src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=600" alt="Study" fill style={{ objectFit: 'cover' }} sizes="(max-width: 1100px) 100vw, 33vw" />
+                  <Image src={bentoStudy} alt="Study" fill placeholder="blur" style={{ objectFit: 'cover' }} sizes="(max-width: 1100px) 100vw, 33vw" />
                   <div className={styles.bentoImgOverlay}></div>
                 </div>
                 <div className={styles.bentoContent}>
@@ -137,7 +143,7 @@ export default function Home() {
                 className={`${styles.bentoBox} ${styles.bentoFullBleed}`}
               >
                 <div className={styles.bentoBgImage}>
-                  <Image src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600" alt="Corporate" fill style={{ objectFit: 'cover' }} sizes="(max-width: 1100px) 100vw, 33vw" />
+                  <Image src={bentoCorporate} alt="Corporate" fill placeholder="blur" style={{ objectFit: 'cover' }} sizes="(max-width: 1100px) 100vw, 33vw" />
                   <div className={styles.bentoDarkOverlay}></div>
                 </div>
                 <div className={styles.bentoBleedContent}>
@@ -167,7 +173,7 @@ export default function Home() {
                 className={`${styles.bentoBox} ${styles.bentoFullBleed}`}
               >
                 <div className={styles.bentoBgImage}>
-                  <Image src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?auto=format&fit=crop&q=80&w=600" alt="Speaking" fill style={{ objectFit: 'cover' }} sizes="(max-width: 1100px) 100vw, 33vw" />
+                  <Image src={bentoSpeaking} alt="Speaking" fill placeholder="blur" style={{ objectFit: 'cover' }} sizes="(max-width: 1100px) 100vw, 33vw" />
                   <div className={styles.bentoDarkOverlay}></div>
                 </div>
                 <div className={styles.bentoBleedContent}>
@@ -221,17 +227,17 @@ export default function Home() {
               <div className={styles.masonryImages}>
                  <div className={styles.masonryImgCol}>
                    <motion.div style={{ y: yImage1 }} className={styles.parallaxImageWrapper}>
-                     <Image src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&q=80&w=600" alt="Germany architecture" className={styles.imgTilted} fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 33vw" />
+                     <Image src={masonryGermany} alt="Germany architecture" className={styles.imgTilted} fill placeholder="blur" style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 33vw" />
                    </motion.div>
                  </div>
                  
                  <div className={styles.masonryImgCol} style={{ paddingTop: '100px' }}>
                    <motion.div style={{ y: yImage2 }} className={styles.parallaxImageWrapper}>
-                     <Image src="https://images.unsplash.com/photo-1534313314376-a72289b6181e?auto=format&fit=crop&q=80&w=600" alt="Berlin" fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 33vw" />
+                     <Image src={masonryBerlin} alt="Berlin" fill placeholder="blur" style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 33vw" />
                    </motion.div>
                    
                    <motion.div style={{ y: yImage3 }} className={`${styles.parallaxImageWrapper} ${styles.offsetDown}`}>
-                     <Image src="https://images.unsplash.com/photo-1599946347371-68eb71b16afc?auto=format&fit=crop&q=80&w=600" alt="Munich" fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 33vw" />
+                     <Image src={masonryMunich} alt="Munich" fill placeholder="blur" style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 33vw" />
                    </motion.div>
                  </div>
               </div>
