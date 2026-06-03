@@ -270,7 +270,7 @@ export default function Home() {
                 <div className={styles.testimonialAvatar} style={{ background: 'var(--color-primary)', color: '#fff' }}>★</div>
                 <div>
                   <strong>Verified Student</strong>
-                  <span>Working Professional · German MNC</span>
+                  <span>Online Batch</span>
                 </div>
               </div>
             </div>
@@ -290,7 +290,7 @@ export default function Home() {
                   <div className={styles.testimonialAvatar}>★</div>
                   <div>
                     <strong>Verified Student</strong>
-                    <span>Working Professional · German MNC</span>
+                    <span>Online Batch</span>
                   </div>
                 </div>
               </motion.div>
@@ -308,7 +308,7 @@ export default function Home() {
                   <div className={styles.testimonialAvatar}>★</div>
                   <div>
                     <strong>Verified Student</strong>
-                    <span>A1 Batch · March 2024</span>
+                    <span>Online Batch</span>
                   </div>
                 </div>
               </motion.div>
@@ -326,7 +326,7 @@ export default function Home() {
                   <div className={styles.testimonialAvatar}>★</div>
                   <div>
                     <strong>Verified Student</strong>
-                    <span>Online Batch · 2024</span>
+                    <span>Online Batch</span>
                   </div>
                 </div>
               </motion.div>
