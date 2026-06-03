@@ -11,7 +11,7 @@ import styles from './page.module.css';
 import contactHero from '../../../public/hero/online.webp';
 import studentsStudying from '../../../public/images/students-studying.webp';
 
-const CONTACT_EMAIL = 'thedeutschhub@gmail.com';
+const CONTACT_WHATSAPP = '97470757220';
 
 const contactMethods = [
   {
@@ -81,19 +81,29 @@ export default function ContactUs() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const subject = encodeURIComponent(`Course Enquiry from ${name || 'Website Visitor'}`);
-    const body = encodeURIComponent(
-      `Hello Pratima German Language Institute,\n\nI am interested in learning more about your German courses. Here are my details:\n\n` +
+    const formattedMessage = 
+      `Hello Pratima German Language Institute,\n\n` +
+      `I am interested in learning more about your German courses. Here are my details:\n\n` +
       `Name: ${name}\n` +
       `WhatsApp Number: ${phone}\n` +
       `Email: ${email}\n` +
       `Interested In: ${interest || 'Not specified'}\n` +
       `Current Level: ${level || 'Not specified'}\n` +
       `Message: ${message || 'No additional message'}\n\n` +
-      `Please get in touch with me at your earliest convenience.\n\nThank you!`
-    );
+      `Please get in touch with me at your earliest convenience.\n\nThank you!`;
 
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+    const encodedText = encodeURIComponent(formattedMessage);
+    
+    // Detect mobile device to decide between WhatsApp App and WhatsApp Web
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
+    
+    const whatsappUrl = isMobile
+      ? `https://api.whatsapp.com/send?phone=${CONTACT_WHATSAPP}&text=${encodedText}`
+      : `https://web.whatsapp.com/send?phone=${CONTACT_WHATSAPP}&text=${encodedText}`;
+
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (
