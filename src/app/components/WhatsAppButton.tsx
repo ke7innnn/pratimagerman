@@ -4,12 +4,26 @@ import { useEffect, useState } from 'react';
 
 export default function WhatsAppButton() {
   const [isVisible, setIsVisible] = useState(false);
+  const [whatsappUrl, setWhatsappUrl] = useState(
+    'https://wa.me/97470757220?text=Hi!%20I%20want%20to%20enquire%20about%20German%20classes.'
+  );
 
   useEffect(() => {
     // Show after a slight delay to not interrupt initial load
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 1500);
+
+    // Detect mobile device to decide between WhatsApp App and WhatsApp Web
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
+    const text = encodeURIComponent('Hi! I want to enquire about German classes.');
+    const url = isMobile
+      ? `https://api.whatsapp.com/send?phone=97470757220&text=${text}`
+      : `https://web.whatsapp.com/send?phone=97470757220&text=${text}`;
+    setWhatsappUrl(url);
+
     return () => clearTimeout(timer);
   }, []);
 
@@ -17,10 +31,11 @@ export default function WhatsAppButton() {
 
   return (
     <a
-      href="https://wa.me/97470757220?text=Hi!%20I%20want%20to%20enquire%20about%20German%20classes."
+      href={whatsappUrl}
       rel="noopener noreferrer"
       className={styles.whatsappButton}
       aria-label="Chat with us on WhatsApp"
+      target="_blank"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
