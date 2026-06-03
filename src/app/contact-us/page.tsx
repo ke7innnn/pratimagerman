@@ -8,6 +8,7 @@ import TopUtilityBar from '../components/TopUtilityBar';
 import MainNavigation from '../components/MainNavigation';
 import Footer from '../components/Footer';
 import styles from './page.module.css';
+import contactHero from '../../../public/hero/online.webp';
 
 const CONTACT_EMAIL = 'thedeutschhub@gmail.com';
 
@@ -107,10 +108,11 @@ export default function ContactUs() {
         <section className={styles.heroSection}>
           <motion.div className={styles.heroImageBg} style={{ y: heroY }}>
             <Image
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1200"
+              src={contactHero}
               alt="Contact Pratima German Language Institute"
               fill
               priority
+              placeholder="blur"
               style={{ objectFit: 'cover' }}
               sizes="100vw"
             />

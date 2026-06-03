@@ -8,6 +8,7 @@ import TopUtilityBar from './components/TopUtilityBar';
 import MainNavigation from './components/MainNavigation';
 import Footer from './components/Footer';
 import styles from './page.module.css';
+import homeHero from '../../public/hero/home.webp';
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -44,10 +45,11 @@ export default function Home() {
         <section className={styles.heroSection}>
           <div className={styles.heroImageBg}>
             <Image 
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200" 
+              src={homeHero} 
               alt="Students collaborating" 
               fill
               priority
+              placeholder="blur"
               style={{ objectFit: 'cover' }}
               sizes="100vw"
             />

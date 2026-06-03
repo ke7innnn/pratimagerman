@@ -7,6 +7,7 @@ import TopUtilityBar from '../components/TopUtilityBar';
 import MainNavigation from '../components/MainNavigation';
 import Footer from '../components/Footer';
 import styles from './page.module.css';
+import offlineHero from '../../../public/hero/offline.webp';
 
 export default function OfflineCoursePage() {
   return (
@@ -21,10 +22,11 @@ export default function OfflineCoursePage() {
         <section className={styles.heroSection}>
           <div className={styles.heroImageBg}>
             <Image
-              src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=1200"
+              src={offlineHero}
               alt="Offline German classroom coming soon"
               fill
               priority
+              placeholder="blur"
               style={{ objectFit: 'cover' }}
               sizes="100vw"
             />

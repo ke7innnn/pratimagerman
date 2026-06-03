@@ -8,6 +8,7 @@ import TopUtilityBar from '../components/TopUtilityBar';
 import MainNavigation from '../components/MainNavigation';
 import Footer from '../components/Footer';
 import styles from './page.module.css';
+import faqHero from '../../../public/hero/faq.webp';
 
 const faqs = [
   {
@@ -63,10 +64,11 @@ export default function FAQPage() {
         <section className={styles.heroSection}>
           <motion.div className={styles.heroImageBg} style={{ y: heroY }}>
             <Image
-              src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200"
+              src={faqHero}
               alt="FAQ German language school"
               fill
               priority
+              placeholder="blur"
               style={{ objectFit: 'cover' }}
               sizes="100vw"
             />
