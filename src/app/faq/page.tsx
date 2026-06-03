@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import TopUtilityBar from '../components/TopUtilityBar';
 import MainNavigation from '../components/MainNavigation';
@@ -61,9 +62,13 @@ export default function FAQPage() {
         {/* ── CINEMATIC HERO ── */}
         <section className={styles.heroSection}>
           <motion.div className={styles.heroImageBg} style={{ y: heroY }}>
-            <img
-              src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=2400"
+            <Image
+              src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200"
               alt="FAQ German language school"
+              fill
+              priority
+              style={{ objectFit: 'cover' }}
+              sizes="100vw"
             />
           </motion.div>
           <div className={styles.heroOverlay} />
@@ -126,9 +131,12 @@ export default function FAQPage() {
                 <span>F</span><span>A</span><span>Q</span>
               </div>
               <div className={styles.sideImage}>
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=600"
                   alt="Students discussing German"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  sizes="(max-width: 1300px) 100vw, 280px"
                 />
                 <div className={styles.sideImageOverlay} />
                 <div className={styles.sideImageBadge}>

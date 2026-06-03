@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import TopUtilityBar from '../components/TopUtilityBar';
 import MainNavigation from '../components/MainNavigation';
@@ -19,9 +20,13 @@ export default function OfflineCoursePage() {
         {/* ── HERO BG ── */}
         <section className={styles.heroSection}>
           <div className={styles.heroImageBg}>
-            <img
-              src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=2400"
+            <Image
+              src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=1200"
               alt="Offline German classroom coming soon"
+              fill
+              priority
+              style={{ objectFit: 'cover' }}
+              sizes="100vw"
             />
           </div>
           <div className={styles.heroOverlay} />

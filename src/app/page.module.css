@@ -219,6 +219,7 @@
   width: 100%;
   height: 300px;
   overflow: hidden;
+  position: relative;
 }
 
 .bentoImgWrap img {

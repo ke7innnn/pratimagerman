@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef, useState } from 'react';
+import Image from 'next/image';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import TopUtilityBar from '../components/TopUtilityBar';
@@ -105,9 +106,13 @@ export default function ContactUs() {
         {/* ── CINEMATIC HERO ── */}
         <section className={styles.heroSection}>
           <motion.div className={styles.heroImageBg} style={{ y: heroY }}>
-            <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=2400"
+            <Image
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1200"
               alt="Contact Pratima German Language Institute"
+              fill
+              priority
+              style={{ objectFit: 'cover' }}
+              sizes="100vw"
             />
           </motion.div>
           <div className={styles.heroOverlay} />
@@ -209,24 +214,13 @@ export default function ContactUs() {
               className={styles.imageStack}
             >
               <div className={styles.imgMain}>
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=900"
                   alt="Students learning German together"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  sizes="(max-width: 1100px) 100vw, 50vw"
                 />
-              </div>
-              <motion.div
-                className={styles.imgFloating}
-                animate={{ y: [0, -12, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400"
-                  alt="German teacher instructor"
-                />
-              </motion.div>
-              <div className={styles.imgStat}>
-                <strong>★</strong>
-                <p>Goethe Certified</p>
               </div>
             </motion.div>
 

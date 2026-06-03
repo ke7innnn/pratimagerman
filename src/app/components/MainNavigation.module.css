@@ -36,42 +36,22 @@
 .logo {
   display: flex;
   align-items: center;
-  justify-content: center;
   text-decoration: none;
   flex-shrink: 0;
-  transition: transform 0.2s;
-  position: relative;
-  height: 40px; 
-  width: 180px; 
-  margin-right: 40px;
+  transition: opacity 0.2s ease;
 }
 
-.logo::before {
-  content: '';
-  position: absolute;
-  top: -16px;
-  left: -24px;
-  right: -24px;
-  bottom: -100px;
-  background: var(--color-bg);
-  border-radius: 0 0 24px 24px;
-  z-index: -1;
-  border-bottom: 1px solid rgba(89, 111, 57, 0.15);
-  border-left: 1px solid rgba(89, 111, 57, 0.15);
-  border-right: 1px solid rgba(89, 111, 57, 0.15);
-  box-shadow: 0 20px 40px rgba(89, 111, 57, 0.08);
+.logo:hover {
+  opacity: 0.85;
 }
 
-.logoImg {
-  height: 150px;
-  width: auto;
-  object-fit: contain;
-  position: absolute;
-  top: -4px;
-}
-
-.logoDot {
+.logoText {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
   color: var(--color-primary);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
 }
 
 /* Desktop nav links */

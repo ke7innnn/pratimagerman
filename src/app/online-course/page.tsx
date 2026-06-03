@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import TopUtilityBar from '../components/TopUtilityBar';
 import MainNavigation from '../components/MainNavigation';
@@ -90,9 +91,13 @@ export default function OnlineCoursePage() {
         {/* ── FULL BLEED HERO ── */}
         <section className={styles.heroSection}>
           <motion.div className={styles.heroImageBg} style={{ y: heroY }}>
-            <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=2400"
+            <Image
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1200"
               alt="Online German learning laptop session"
+              fill
+              priority
+              style={{ objectFit: 'cover' }}
+              sizes="100vw"
             />
             <div className={styles.heroOverlay} />
           </motion.div>
@@ -203,7 +208,13 @@ export default function OnlineCoursePage() {
               viewport={{ once: true }}
               className={styles.imageryItem}
             >
-              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=900" alt="Student studying German online" />
+              <Image
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600"
+                alt="Student studying German online"
+                fill
+                style={{ objectFit: 'cover' }}
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
               <div className={styles.imageryOverlay}><span>Live Learning</span></div>
             </motion.div>
             <motion.div
@@ -213,7 +224,13 @@ export default function OnlineCoursePage() {
               viewport={{ once: true }}
               className={`${styles.imageryItem} ${styles.imageryItemTall}`}
             >
-              <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=900" alt="German language books and notes" />
+              <Image
+                src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=600"
+                alt="German language books and notes"
+                fill
+                style={{ objectFit: 'cover' }}
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
               <div className={styles.imageryOverlay}><span>Goethe Expert</span></div>
             </motion.div>
             <motion.div
@@ -223,7 +240,13 @@ export default function OnlineCoursePage() {
               viewport={{ once: true }}
               className={styles.imageryItem}
             >
-              <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=900" alt="Student celebrating success" />
+              <Image
+                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=600"
+                alt="Student celebrating success"
+                fill
+                style={{ objectFit: 'cover' }}
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
               <div className={styles.imageryOverlay}><span>Proven Results</span></div>
             </motion.div>
           </div>

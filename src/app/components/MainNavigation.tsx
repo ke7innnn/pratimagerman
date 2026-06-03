@@ -51,7 +51,7 @@ export default function MainNavigation() {
     <nav className={`${styles.mainNav} ${isScrolled ? styles.scrolled : ''} ${!isVisible ? styles.hidden : ''}`}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          <img src="/logo/new%20logo.png" alt="The Deutsch Hub" className={styles.logoImg} />
+          <span className={styles.logoText}>The Deutsch Hub</span>
         </Link>
 
         {/* Desktop links */}
