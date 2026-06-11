@@ -46,7 +46,7 @@ const contactMethods = [
     ),
     title: 'Office Hours',
     desc: 'We are available 6 days a week',
-    lines: ['Mon – Sat: 9 AM – 8 PM', 'Sunday: Closed'],
+    lines: ['Mon – Sat: 9 AM – 8 PM'],
     href: [],
   },
   {

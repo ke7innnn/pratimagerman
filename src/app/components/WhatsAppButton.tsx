@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 export default function WhatsAppButton() {
   const [isVisible, setIsVisible] = useState(false);
   const [whatsappUrl, setWhatsappUrl] = useState(
-    'https://wa.me/97470757220?text=Hi!%20I%20want%20to%20enquire%20about%20German%20classes.'
+    'https://wa.me/919967745988?text=Hi!%20I%20want%20to%20enquire%20about%20German%20classes.'
   );
 
   useEffect(() => {
@@ -20,8 +20,8 @@ export default function WhatsAppButton() {
     );
     const text = encodeURIComponent('Hi! I want to enquire about German classes.');
     const url = isMobile
-      ? `https://api.whatsapp.com/send?phone=97470757220&text=${text}`
-      : `https://web.whatsapp.com/send?phone=97470757220&text=${text}`;
+      ? `https://api.whatsapp.com/send?phone=919967745988&text=${text}`
+      : `https://web.whatsapp.com/send?phone=919967745988&text=${text}`;
     setWhatsappUrl(url);
 
     return () => clearTimeout(timer);
